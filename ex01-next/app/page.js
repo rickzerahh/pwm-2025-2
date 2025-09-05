@@ -1,190 +1,32 @@
+import { Contador } from "@/components/Contador";
+import { MyButton } from "@/components/MyButton";
+import { ProductsList } from "@/components/ProductsList";
+
 export default function Home() {
+  let PI = 3.14159;
   return (
-    <>
-      <a href="https://www.google.com.br/" target="_blank">
-        Ir para o Google
-      </a>
-      <br />
-      <a href="#secao1">Ir para a seção 1</a>
-      <br />
-      <a href="https://marciobueno.com" target="_blank">
-        Ir para o meu site
-      </a>
+    <div>
+      <h1>Welcome to my app</h1>
       <hr />
-      <h1>Lista de plantas silvestres na Amazônia</h1>
-      <p>
-        A lista de plantas silvestres da Amazônia inclui todas as espécies
-        endêmicas da vegetação da Amazônia. <br /> Segundo Giacometti (1990), é
-        estimada a existência de 800 espécies vegetais de valor econômico ou
-        social nesta floresta. Elas foram listadas abaixo de acordo com a
-        família à qual pertencem.
-      </p>
+      <Contador />
+      <Contador />
+      <hr />
+      <ProductsList />
       <hr />
       <p>
-        Bromeliaceae Juss. é uma família de monocotiledôneas, que segundo a
-        classificação filogenética AGP III (2009) <br /> pertence à ordem dos
-        Poales, com plantas terrestres, rupícolas ou, principalmente epífitas,
-        possui 3.172 espécies, distribuídas em 58 gêneros.
-      </p>
-      <hr />
-      <p>
-        Chrysobalanaceae é uma família de plantas angiospérmicas (plantas com
-        flor - divisão Magnoliophyta), pertencente à ordem Malpighiales.
-      </p>
-      <p>
-        A lista de plantas silvestres da Amazônia inclui todas as espécies
-        endêmicas da vegetação da Amazônia. <br /> Segundo Giacometti (1990), é
-        estimada a existência de 800 espécies vegetais de valor econômico ou
-        social nesta floresta. Elas foram listadas abaixo de acordo com a
-        família à qual pertencem.
-      </p>
-      <hr />
-      <p>
-        Bromeliaceae Juss. é uma família de monocotiledôneas, que segundo a
-        classificação filogenética AGP III (2009) <br /> pertence à ordem dos
-        Poales, com plantas terrestres, rupícolas ou, principalmente epífitas,
-        possui 3.172 espécies, distribuídas em 58 gêneros.
-      </p>
-      <hr />
-      <p>
-        Chrysobalanaceae é uma família de plantas angiospérmicas (plantas com
-        flor - divisão Magnoliophyta), pertencente à ordem Malpighiales.
-      </p>
-      <p>
-        A lista de plantas silvestres da Amazônia inclui todas as espécies
-        endêmicas da vegetação da Amazônia. <br /> Segundo Giacometti (1990), é
-        estimada a existência de 800 espécies vegetais de valor econômico ou
-        social nesta floresta. Elas foram listadas abaixo de acordo com a
-        família à qual pertencem.
-      </p>
-      <hr />
-      <p>
-        Bromeliaceae Juss. é uma família de monocotiledôneas, que segundo a
-        classificação filogenética AGP III (2009) <br /> pertence à ordem dos
-        Poales, com plantas terrestres, rupícolas ou, principalmente epífitas,
-        possui 3.172 espécies, distribuídas em 58 gêneros.
-      </p>
-      <hr />
-      <p>
-        Chrysobalanaceae é uma família de plantas angiospérmicas (plantas com
-        flor - divisão Magnoliophyta), pertencente à ordem Malpighiales.
-      </p>
-      <p>
-        A lista de plantas silvestres da Amazônia inclui todas as espécies
-        endêmicas da vegetação da Amazônia. <br /> Segundo Giacometti (1990), é
-        estimada a existência de 800 espécies vegetais de valor econômico ou
-        social nesta floresta. Elas foram listadas abaixo de acordo com a
-        família à qual pertencem.
-      </p>
-      <hr />
-      <p>
-        Bromeliaceae Juss. é uma família de monocotiledôneas, que segundo a
-        classificação filogenética AGP III (2009) <br /> pertence à ordem dos
-        Poales, com plantas terrestres, rupícolas ou, principalmente epífitas,
-        possui 3.172 espécies, distribuídas em 58 gêneros.
-      </p>
-      <hr />
-      <p>
-        Chrysobalanaceae é uma família de plantas angiospérmicas (plantas com
-        flor - divisão Magnoliophyta), pertencente à ordem Malpighiales.
-      </p>
-      <p>
-        A lista de plantas silvestres da Amazônia inclui todas as espécies
-        endêmicas da vegetação da Amazônia. <br /> Segundo Giacometti (1990), é
-        estimada a existência de 800 espécies vegetais de valor econômico ou
-        social nesta floresta. Elas foram listadas abaixo de acordo com a
-        família à qual pertencem.
-      </p>
-      <hr />
-      <p>
-        Bromeliaceae Juss. é uma família de monocotiledôneas, que segundo a
-        classificação filogenética AGP III (2009) <br /> pertence à ordem dos
-        Poales, com plantas terrestres, rupícolas ou, principalmente epífitas,
-        possui 3.172 espécies, distribuídas em 58 gêneros.
-      </p>
-      <hr />
-      <p>
-        Chrysobalanaceae é uma família de plantas angiospérmicas (plantas com
-        flor - divisão Magnoliophyta), pertencente à ordem Malpighiales.
-      </p>
-      <p>
-        A lista de plantas silvestres da Amazônia inclui todas as espécies
-        endêmicas da vegetação da Amazônia. <br /> Segundo Giacometti (1990), é
-        estimada a existência de 800 espécies vegetais de valor econômico ou
-        social nesta floresta. Elas foram listadas abaixo de acordo com a
-        família à qual pertencem.
-      </p>
-      <hr />
-      <p>
-        Bromeliaceae Juss. é uma família de monocotiledôneas, que segundo a
-        classificação filogenética AGP III (2009) <br /> pertence à ordem dos
-        Poales, com plantas terrestres, rupícolas ou, principalmente epífitas,
-        possui 3.172 espécies, distribuídas em 58 gêneros.
-      </p>
-      <hr />
-      <p>
-        Chrysobalanaceae é uma família de plantas angiospérmicas (plantas com
-        flor - divisão Magnoliophyta), pertencente à ordem Malpighiales.
-      </p>
-      <p id="secao1">
-        Seção de interesse...
+        Hello there.
         <br />
-        A lista de plantas silvestres da Amazônia inclui todas as espécies
-        endêmicas da vegetação da Amazônia. <br /> Segundo Giacometti (1990), é
-        estimada a existência de 800 espécies vegetais de valor econômico ou
-        social nesta floresta. Elas foram listadas abaixo de acordo com a
-        família à qual pertencem.
+        <span className="blueText">How do you do?</span>
       </p>
+      <MyButton />
+      <p>Doing math: {2 * PI}</p>
       <hr />
-      <p>
-        Bromeliaceae Juss. é uma família de monocotiledôneas, que segundo a
-        classificação filogenética AGP III (2009) <br /> pertence à ordem dos
-        Poales, com plantas terrestres, rupícolas ou, principalmente epífitas,
-        possui 3.172 espécies, distribuídas em 58 gêneros.
-      </p>
-      <hr />
-      <p>
-        Chrysobalanaceae é uma família de plantas angiospérmicas (plantas com
-        flor - divisão Magnoliophyta), pertencente à ordem Malpighiales.
-      </p>
-      <p>
-        A lista de plantas silvestres da Amazônia inclui todas as espécies
-        endêmicas da vegetação da Amazônia. <br /> Segundo Giacometti (1990), é
-        estimada a existência de 800 espécies vegetais de valor econômico ou
-        social nesta floresta. Elas foram listadas abaixo de acordo com a
-        família à qual pertencem.
-      </p>
-      <hr />
-      <p>
-        Bromeliaceae Juss. é uma família de monocotiledôneas, que segundo a
-        classificação filogenética AGP III (2009) <br /> pertence à ordem dos
-        Poales, com plantas terrestres, rupícolas ou, principalmente epífitas,
-        possui 3.172 espécies, distribuídas em 58 gêneros.
-      </p>
-      <hr />
-      <p>
-        Chrysobalanaceae é uma família de plantas angiospérmicas (plantas com
-        flor - divisão Magnoliophyta), pertencente à ordem Malpighiales.
-      </p>
-      <p>
-        A lista de plantas silvestres da Amazônia inclui todas as espécies
-        endêmicas da vegetação da Amazônia. <br /> Segundo Giacometti (1990), é
-        estimada a existência de 800 espécies vegetais de valor econômico ou
-        social nesta floresta. Elas foram listadas abaixo de acordo com a
-        família à qual pertencem.
-      </p>
-      <hr />
-      <p>
-        Bromeliaceae Juss. é uma família de monocotiledôneas, que segundo a
-        classificação filogenética AGP III (2009) <br /> pertence à ordem dos
-        Poales, com plantas terrestres, rupícolas ou, principalmente epífitas,
-        possui 3.172 espécies, distribuídas em 58 gêneros.
-      </p>
-      <hr />
-      <p>
-        Chrysobalanaceae é uma família de plantas angiospérmicas (plantas com
-        flor - divisão Magnoliophyta), pertencente à ordem Malpighiales.
-      </p>
-    </>
+      <img
+        className="avatar"
+        src="https://www.w3schools.com/howto/img_avatar.png"
+        width={100}
+        height={100}
+      />
+    </div>
   );
 }
