@@ -1,6 +1,6 @@
 import { Contador } from "@/components/Contador";
 import { MyButton } from "@/components/MyButton";
-import { ProductsList } from "@/components/ProductsList";
+import Link from "next/link";
 
 export default function Home() {
   let PI = 3.14159;
@@ -8,16 +8,19 @@ export default function Home() {
     <div>
       <h1>Welcome to my app</h1>
       <hr />
-      <Contador />
-      <Contador />
+      <Link href="/taskList">Task List</Link>
       <hr />
-      <ProductsList />
+      <Link href="/foodList">Food List</Link>
       <hr />
       <p>
         Hello there.
         <br />
         <span className="blueText">How do you do?</span>
       </p>
+      <hr />
+      <Contador />
+      <Contador />
+      <hr />
       <MyButton />
       <p>Doing math: {2 * PI}</p>
       <hr />
