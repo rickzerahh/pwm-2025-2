@@ -9,8 +9,10 @@ import {
   TextInput,
   View,
 } from "react-native";
+// import { FlatListExample } from "@/components/FlatListExample";
+import { SectionListExample } from "@/components/SectionListExample";
 
-export default function Index() {
+export function Index() {
   const [idade, onChangeIdade] = useState("");
   const anoNasc = new Date().getFullYear() - parseInt(idade);
   return (
@@ -51,6 +53,11 @@ export default function Index() {
       <View style={styles.space} />
     </ScrollView>
   );
+}
+
+export default function App() {
+  // return <FlatListExample />;
+  return <SectionListExample />;
 }
 
 const styles = StyleSheet.create({
