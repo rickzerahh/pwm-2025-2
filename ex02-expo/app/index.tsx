@@ -1,3 +1,4 @@
+import { useRouter } from "expo-router";
 import { useState } from "react";
 import {
   Alert,
@@ -12,7 +13,8 @@ import {
 // import { FlatListExample } from "@/components/FlatListExample";
 import { SectionListExample } from "@/components/SectionListExample";
 
-export function Index() {
+export default function Index() {
+  const router = useRouter();
   const [idade, onChangeIdade] = useState("");
   const anoNasc = new Date().getFullYear() - parseInt(idade);
   return (
@@ -50,12 +52,17 @@ export function Index() {
           accessibilityLabel="Learn more about this purple button"
         />
       </View>
+      <Button
+        title="Ir para Lista de Tarefas"
+        onPress={() => router.navigate("/taskList")}
+      />
       <View style={styles.space} />
     </ScrollView>
   );
 }
 
-export default function App() {
+// Exemplos de Listas
+function App() {
   // return <FlatListExample />;
   return <SectionListExample />;
 }
