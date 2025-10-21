@@ -4,6 +4,7 @@ import {
   Alert,
   Button,
   Image,
+  Pressable,
   ScrollView,
   StyleSheet,
   Text,
@@ -16,6 +17,7 @@ import { SectionListExample } from "@/components/SectionListExample";
 export default function Index() {
   const router = useRouter();
   const [idade, onChangeIdade] = useState("");
+  const [showDetails, setShowDetails] = useState(true);
   const anoNasc = new Date().getFullYear() - parseInt(idade);
   return (
     <ScrollView contentContainerStyle={styles.container}>
@@ -25,11 +27,17 @@ export default function Index() {
         source={require("@/assets/images/avatar.jpg")}
         resizeMode="cover"
       />
-      <Text style={styles.text}>
-        Este é um App de exemplo da disciplina Programação Web e Mobile do Curso
-        de Ciência da Computação da Universidade Católica de Pernambuco
-        (semestre 2025.2)
-      </Text>
+      <Pressable
+        onPress={() => {
+          setShowDetails(!showDetails);
+        }}
+      >
+        <Text numberOfLines={showDetails ? 0 : 1} style={styles.text}>
+          Este é um App de exemplo da disciplina Programação Web e Mobile do
+          Curso de Ciência da Computação da Universidade Católica de Pernambuco
+          (semestre 2025.2)
+        </Text>
+      </Pressable>
       {!isNaN(anoNasc) && <Text>Você nasceu em {anoNasc}</Text>}
       <TextInput
         style={styles.input}
@@ -80,9 +88,9 @@ const styles = StyleSheet.create({
     marginBottom: 30,
   },
   avatar: {
-    width: 300,
-    height: 300,
-    borderRadius: 150,
+    width: 150,
+    height: 150,
+    borderRadius: 75,
   },
   text: {
     fontSize: 16,
