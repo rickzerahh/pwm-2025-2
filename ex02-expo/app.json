@@ -2,6 +2,7 @@
   "expo": {
     "name": "ex02-expo",
     "slug": "ex02-expo",
+    "owner": "rickzerahh",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -48,14 +49,14 @@
     "extra": {
       "router": {},
       "eas": {
-        "projectId": "32fea3ba-b828-4335-b45d-8b3afa00f484"
+        "projectId": "50785fe5-a0cb-41e1-a78d-274fdad3cda8"
       }
     },
     "runtimeVersion": {
       "policy": "appVersion"
     },
     "updates": {
-      "url": "https://u.expo.dev/32fea3ba-b828-4335-b45d-8b3afa00f484"
+      "url": "https://u.expo.dev/50785fe5-a0cb-41e1-a78d-274fdad3cda8"
     }
   }
 }

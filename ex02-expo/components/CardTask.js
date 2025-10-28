@@ -1,17 +1,30 @@
-import { Button, Switch, View, Text } from "react-native";
+import { Button, Switch, HStack, Text, VStack, Box } from "native-base";
 
 export function CardTask({ task, onDelete, onCheck }) {
   return (
-    <View>
-      <Text>{task.description}</Text>
-      <Switch
-        trackColor={{ false: "#767577", true: "#81b0ff" }}
-        thumbColor={"#f5dd4b"}
-        ios_backgroundColor="#3e3e3e"
-        onValueChange={() => onCheck(task)}
-        value={task.done}
-      />
-      <Button title="X" onPress={() => onDelete(task.objectId)} />
-    </View>
+    <Box
+      bg="gray.100"
+      p={3}
+      mb={2}
+      borderRadius="lg"
+      shadow={1}
+      w="100%"
+    >
+      <HStack justifyContent="space-between" alignItems="center">
+        <VStack>
+          <Text fontSize="md">{task.description}</Text>
+        </VStack>
+        <HStack space={2} alignItems="center">
+          <Switch
+            isChecked={task.done}
+            onToggle={() => onCheck(task)}
+            colorScheme="blue"
+          />
+          <Button size="sm" colorScheme="red" onPress={() => onDelete(task.objectId)}>
+            X
+          </Button>
+        </HStack>
+      </HStack>
+    </Box>
   );
 }

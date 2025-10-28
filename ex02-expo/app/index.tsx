@@ -1,114 +1,72 @@
 import { useRouter } from "expo-router";
 import { useState } from "react";
 import {
-  Alert,
+  Box,
   Button,
   Image,
+  Input,
   Pressable,
   ScrollView,
-  StyleSheet,
   Text,
-  TextInput,
-  View,
-} from "react-native";
-// import { FlatListExample } from "@/components/FlatListExample";
-import { SectionListExample } from "@/components/SectionListExample";
+  VStack,
+  HStack,
+} from "native-base";
 
 export default function Index() {
   const router = useRouter();
-  const [idade, onChangeIdade] = useState("");
+  const [idade, setIdade] = useState("");
   const [showDetails, setShowDetails] = useState(true);
   const anoNasc = new Date().getFullYear() - parseInt(idade);
+
   return (
-    <ScrollView contentContainerStyle={styles.container}>
-      <Text style={styles.title}>Olá Turma!</Text>
+    <ScrollView contentContainerStyle={{ alignItems: "center", padding: 15, backgroundColor: "beige" }}>
+      <Text fontSize="4xl" fontWeight="bold" mb={6}>
+        Olá Turma!
+      </Text>
+
       <Image
-        style={styles.avatar}
         source={require("@/assets/images/avatar.jpg")}
-        resizeMode="cover"
+        alt="Avatar"
+        size={150}
+        borderRadius={75}
+        mb={4}
       />
-      <Pressable
-        onPress={() => {
-          setShowDetails(!showDetails);
-        }}
-      >
-        <Text numberOfLines={showDetails ? 0 : 1} style={styles.text}>
-          Este é um App de exemplo da disciplina Programação Web e Mobile do
-          Curso de Ciência da Computação da Universidade Católica de Pernambuco
-          (semestre 2025.2)
+
+      <Pressable onPress={() => setShowDetails(!showDetails)}>
+        <Text mt={4} fontSize="md" textAlign="center">
+          {showDetails
+            ? "Este é um App de exemplo da disciplina Programação Web e Mobile do Curso de Ciência da Computação da Universidade Católica de Pernambuco (semestre 2025.2)"
+            : "Toque para ver mais..."}
         </Text>
       </Pressable>
-      {!isNaN(anoNasc) && <Text>Você nasceu em {anoNasc}</Text>}
-      <TextInput
-        style={styles.input}
-        onChangeText={onChangeIdade}
-        value={idade}
+
+      {!isNaN(anoNasc) && (
+        <Text mt={3}>Você nasceu em {anoNasc}</Text>
+      )}
+
+      <Input
+        mt={4}
         placeholder="Qual a sua idade?"
+        value={idade}
+        onChangeText={setIdade}
         keyboardType="numeric"
+        w="64"
       />
-      <View style={styles.buttonsContainer}>
-        <Button
-          onPress={() => Alert.alert("Botão OK pressionado")}
-          title="     OK     "
-          color="#841584"
-          accessibilityLabel="Learn more about this purple button"
-        />
-        <Button
-          onPress={() => Alert.alert("Botão Cancel pressionado")}
-          title="Cancel"
-          color="#841584"
-          accessibilityLabel="Learn more about this purple button"
-        />
-      </View>
-      <Button
-        title="Ir para Lista de Tarefas"
-        onPress={() => router.navigate("/taskList")}
-      />
-      <View style={styles.space} />
+
+      <HStack mt={5} space={4}>
+        <Button colorScheme="purple" onPress={() => alert("Botão OK pressionado")}>
+          OK
+        </Button>
+        <Button colorScheme="purple" onPress={() => alert("Botão Cancel pressionado")}>
+          Cancel
+        </Button>
+      </HStack>
+
+      <Button mt={6} colorScheme="blue" onPress={() => router.navigate("/taskList")}>
+        Ir para Lista de Tarefas
+      </Button>
+
+      <Box h={16} />
     </ScrollView>
   );
 }
-
-// Exemplos de Listas
-function App() {
-  // return <FlatListExample />;
-  return <SectionListExample />;
-}
-
-const styles = StyleSheet.create({
-  container: {
-    justifyContent: "flex-start",
-    alignItems: "center",
-    backgroundColor: "beige",
-    padding: 15,
-  },
-  title: {
-    fontSize: 42,
-    fontWeight: "bold",
-    marginBottom: 30,
-  },
-  avatar: {
-    width: 150,
-    height: 150,
-    borderRadius: 75,
-  },
-  text: {
-    fontSize: 16,
-    marginTop: 30,
-  },
-  input: {
-    height: 45,
-    width: 200,
-    margin: 12,
-    borderWidth: 1,
-    padding: 10,
-  },
-  space: {
-    height: 70,
-  },
-  buttonsContainer: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    width: 250,
-  },
-});
